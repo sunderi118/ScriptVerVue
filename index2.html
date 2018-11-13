@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+#appがelement
+<div id="app">
+<!--data表示-->
+<!--<P>{{message}}</P>-->
+
+<!--v-if-->
+<!--trueなら表示-->
+<div v-if = "value1">
+true
+</div>
+<!--falseなら非表示-->
+<div v-if="value2">
+false
+</div>
+
+<!--v-show-->
+<!--trueなら表示 -->
+<div v-sow = "value1">
+true
+</div>
+<!--falseならdisplayがnode-->
+<div v-show="value2">
+false
+</div>
+
+<!--v-for-->
+<!--繰り替えし-->
+<div v-for="user in users">
+{{user.number}}.{{user.name}}:{{user.age}}
+</div>
+
+<!--v-model-->
+<!--入力欄にデータを双方向で反映させる-->
+<input type="text" v-model="input">
+{{input}}
+
+<!--v-vind-->
+<!--html属性に値を、結びつける-->
+<p><a v-bind:href="url">google</a></p>
+
+<span v-bind:title="message">
+current time</span>
+</span>
+
+<!--v-on-->
+<!--イベント発生時に処理を実行する-->
+<button v-on:click="alertMessage()">アラート表示</button>
+<br>
+</div>
+
+<script src="index2.js">
+</script>
+</body>
+</html>
